@@ -1,0 +1,14 @@
+apt update
+apt install beef-xss
+beef-xss
+
+username : beef
+mdp : mybeef
+
+http://170.187.136.114:3000/ui/panel
+http://170.187.136.114:3000/ui/authentication
+
+victim : http://170.187.136.114:3000/demos/basic.html
+
+
+https://www.youtube.com/watch?v=sOkqeWzgRIM

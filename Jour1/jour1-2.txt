@@ -1,0 +1,17 @@
+Création du serveur 
+Accès au serveur via ssh : 
+
+apt update
+apt install apache2
+Service apache2 restart
+cd /var/www/html
+mv index.html index_old.html
+apt install unzip
+
+wget https://raw.githubusercontent.com/SitrakaResearchAndPOC/zozorTest/refs/heads/main/Siteweb_test.zip
+
+Service apache2 restart
+
+
+Service apache2 status
+

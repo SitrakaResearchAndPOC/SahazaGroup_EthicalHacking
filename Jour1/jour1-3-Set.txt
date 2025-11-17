@@ -1,0 +1,19 @@
+apt update
+apt install set
+setoolkit
+
+Select 1 ( social engineering attack)
+Select 2 (website attack vector)
+Select 3 (credential harvester attack)
+Select 2 (site cloner) 
+
+Tape ip address of server 
+
+check with website: https://github.com/login (select with login session) 
+170.187.136.114
+
+
+Try https://www.facebook.com/login.php/
+
+
+EXERCICE : TESTER AVEC FACEBOOK

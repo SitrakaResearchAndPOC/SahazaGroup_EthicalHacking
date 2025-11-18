@@ -1,0 +1,39 @@
+Nmap : 
+Finding host and scanning network 
+learning.oreilly.com/library/view/ceh-certified-ethical
+
+1. check for live systems
+sudo nmap -sP 10.7.1.0/24
+
+2. check for open ports
+(port 80, 443 for web)
+sudo nmap -sT -p 80,443 10.7.1.0/24
+
+T : for TCP using 3-way handshake (Full Open scan)
+message 1 : i'm prot 443 Are you theire (SYN)
+message 2 : yes i'm thiere, (SYN ACK)
+message 3 : let's talk (ACK)
+
+More detect by the IDS
+3-way handshake without connection 
+
+sudo nmap -sS -p 80,443 10.7.1.0/24
+S : Stealthy (half Open Scan)
+(2way handshake)
+
+
+sudo nmap -sT 10.7.1.226
+filter by ip.addr eq 10.7.1.226
+
+click one converstation and "apply this filter"
+
+4. Perform banner grabbing
+OS detection : 
+sudo nmap -sO 10.7.1.226
+
+Mora options 
+sudo nmap -A 10.7.1.226
+
+5. scan vulnerabilities
+namp --script vuln 10.7.1.226
+

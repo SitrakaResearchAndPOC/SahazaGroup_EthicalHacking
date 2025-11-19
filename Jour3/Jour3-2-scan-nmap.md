@@ -118,3 +118,7 @@ exploit
 ```
 
 UTILISER METASPLOIT POUR FAIRE DU SCAN
+* https://www.offsec.com/metasploit-unleashed/port-scanning/
+* https://medium.com/@redfanatic7/discover-a-machines-open-ports-using-metasploit-3e3d53bff8bb
+* https://www.youtube.com/watch?v=4-sglfcX9SI
+

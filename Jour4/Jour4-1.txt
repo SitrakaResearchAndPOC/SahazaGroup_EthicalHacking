@@ -1,1 +1,9 @@
-https://www.youtube.com/watch?v=pvPdOO2VcwM&t=1152s
+EternalBlue : 
+------------
+lab : https://tryhackme.com/room/blue#
+Solution : https://www.youtube.com/watch?v=s6rwS7UuMt8
+
+Snort : 
+------
+lab : https://tryhackme.com/room/snort
+Solution : https://www.youtube.com/watch?v=pvPdOO2VcwM&t=1152s
